@@ -1,10 +1,10 @@
 package com.zlove.flutter.module;
 
-import android.app.Application;
-
 import com.zlove.flutter.module.flutter.FlutterInitialize;
 
-public class SuperFlutterApplication extends Application {
+import io.flutter.app.FlutterApplication;
+
+public class SuperFlutterApplication extends FlutterApplication {
 
     @Override
     public void onCreate() {
