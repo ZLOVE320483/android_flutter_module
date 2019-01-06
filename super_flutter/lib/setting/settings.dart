@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:super_flutter/utils/common_method_channel.dart';
 
 class Settings extends StatelessWidget {
 
@@ -21,7 +22,7 @@ class Settings extends StatelessWidget {
       elevation: 0.0,
       leading: GestureDetector(
         onTap: () {
-
+          CommonMethodChannel.finish();
         },
         child: Padding(padding: EdgeInsets.all(15), child: Image.asset('assets/uikit_ic_navbar_back_black.png', height: 25, width: 25,),),
       ),

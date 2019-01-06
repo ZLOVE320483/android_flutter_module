@@ -12,5 +12,6 @@ public class SuperFlutterActivity extends FlutterRouteActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         GeneratedPluginRegistrant.registerWith(this);
+        MethodChannelUtils.initMethodChannel(this, getFlutterView());
     }
 }
