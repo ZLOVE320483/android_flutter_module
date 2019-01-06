@@ -79,10 +79,10 @@ packages:
     description:
       path: "router/"
       ref: HEAD
-      resolved-ref: "0664b383a96f842aaa9cfcf4524d3511c20ab226"
+      resolved-ref: afb30f41a3226b2cb16719255bc4c5d80386297b
       url: "https://github.com/ZLOVE320483/flutter_plugin_router.git"
     source: git
-    version: "0.0.2"
+    version: "0.0.3"
   sky_engine:
     dependency: transitive
     description: flutter

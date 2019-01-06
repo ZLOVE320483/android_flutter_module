@@ -29,6 +29,13 @@ class Settings extends StatelessWidget {
   }
 
   Widget _buildBodyWidget() {
-    return Container(child: Text("Settings", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.blue),),);
+    return Container(decoration: BoxDecoration(color: Colors.white,
+                      border: Border(top: BorderSide(width: 1, color: Color(0xFFf8f8f8)))),
+                      child: Center(
+                        child: Text(
+                          "Settings", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.blue),
+                        ),
+                      ),
+    );
   }
 }
