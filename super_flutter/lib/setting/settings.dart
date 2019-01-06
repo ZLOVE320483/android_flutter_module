@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:super_flutter/utils/common_method_channel.dart';
+import 'package:router/router.dart';
 
 class Settings extends StatelessWidget {
 
@@ -33,10 +34,18 @@ class Settings extends StatelessWidget {
     return Container(decoration: BoxDecoration(color: Colors.white,
                       border: Border(top: BorderSide(width: 1, color: Color(0xFFf8f8f8)))),
                       child: Center(
-                        child: Text(
-                          "Settings", style: TextStyle(fontSize: 30, fontWeight: FontWeight.bold, color: Colors.blue),
+                        child: RaisedButton(onPressed: _jumpToNative, padding: EdgeInsets.all(10),
+                          child: Text("Jump To Native", style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold, color: Colors.blue),),
                         ),
                       ),
     );
+  }
+
+  void _jumpToNative() {
+    Map<String, dynamic> args = {
+      "user_id": 1011,
+      "user_name": "zlove"
+    };
+    Router.jumpToNativeActivity("com.zlove.flutter.module.MainActivity", extras: args);
   }
 }

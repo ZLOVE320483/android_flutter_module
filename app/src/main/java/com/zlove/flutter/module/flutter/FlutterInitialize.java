@@ -3,7 +3,10 @@ package com.zlove.flutter.module.flutter;
 import android.content.Context;
 import android.content.Intent;
 
+import com.zlove.flutter.module.MainActivity;
 import com.zlove.router.RouterPlugin;
+
+import java.util.Map;
 
 public class FlutterInitialize {
 
@@ -27,7 +30,16 @@ public class FlutterInitialize {
         });
     }
 
-    private static void jumpNativeActivity(Context context, String name, Object extraArgs) {
-
+    @SuppressWarnings("unchecked")
+    private static void jumpNativeActivity(Context context, String openUrl, Object extraArgs) {
+       switch (openUrl) {
+           case "com.zlove.flutter.module.MainActivity":
+               Map<String, Object> args = (Map<String, Object>) extraArgs;
+               Intent intent = new Intent(context, MainActivity.class);
+               intent.putExtra("user_id", (int) args.get("user_id"));
+               intent.putExtra("user_name", (String) args.get("user_name"));
+               context.startActivity(intent);
+               break;
+       }
     }
 }
