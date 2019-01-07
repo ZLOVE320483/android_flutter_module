@@ -21,8 +21,13 @@ public class MainActivity extends AppCompatActivity {
         initData();
 
         findViewById(R.id.jump).setOnClickListener(v ->
-            FlutterUtils.jumpSettingPage(this)
+             FlutterUtils.jumpSettingPage(this)
         );
+
+        findViewById(R.id.jump_to_login).setOnClickListener(v ->
+                startActivity(new Intent(MainActivity.this, LoginActivity.class))
+        );
+
     }
 
     private void initData() {
