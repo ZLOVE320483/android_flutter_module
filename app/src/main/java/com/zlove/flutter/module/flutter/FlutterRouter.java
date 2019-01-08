@@ -9,4 +9,5 @@ public interface FlutterRouter {
 
     String PAGE_SETTING = "/setting";
 
+    String PAGE_LOGIN = "/login";
 }

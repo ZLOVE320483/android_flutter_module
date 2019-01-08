@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         );
 
         findViewById(R.id.jump_to_login).setOnClickListener(v ->
-                startActivity(new Intent(MainActivity.this, LoginActivity.class))
+                FlutterUtils.jumpLoginPage(this)
         );
 
     }

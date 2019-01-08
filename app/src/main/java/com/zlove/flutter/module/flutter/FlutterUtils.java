@@ -9,6 +9,10 @@ public class FlutterUtils {
         openFlutterPage(context, FlutterRouter.PAGE_SETTING);
     }
 
+    public static void jumpLoginPage(Context context) {
+        openFlutterPage(context, FlutterRouter.PAGE_LOGIN);
+    }
+
     private static void openFlutterPage(Context context, String router) {
         Intent intent = new Intent(context, SuperFlutterActivity.class);
         intent.putExtra(FlutterRouter.ROUTER_KEY, router);
