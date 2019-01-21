@@ -13,6 +13,10 @@ public class FlutterUtils {
         openFlutterPage(context, FlutterRouter.PAGE_LOGIN);
     }
 
+    public static void jumpAnimPage(Context context) {
+        openFlutterPage(context, FlutterRouter.PAGE_ANIM);
+    }
+
     private static void openFlutterPage(Context context, String router) {
         Intent intent = new Intent(context, SuperFlutterActivity.class);
         intent.putExtra(FlutterRouter.ROUTER_KEY, router);

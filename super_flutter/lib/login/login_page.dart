@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:super_flutter/utils/common_method_channel.dart';
+import 'package:router/router.dart';
 
 class LoginPage extends StatelessWidget {
 
@@ -63,5 +64,6 @@ class LoginPage extends StatelessWidget {
 
   void _login(String phone, String password) {
     print("$phone, $password");
+    Router.jumpToNativeActivity("com.zlove.flutter.module.MainActivity");
   }
 }

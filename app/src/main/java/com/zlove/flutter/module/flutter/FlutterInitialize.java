@@ -36,8 +36,6 @@ public class FlutterInitialize {
            case "com.zlove.flutter.module.MainActivity":
                Map<String, Object> args = (Map<String, Object>) extraArgs;
                Intent intent = new Intent(context, MainActivity.class);
-               intent.putExtra("user_id", (int) args.get("user_id"));
-               intent.putExtra("user_name", (String) args.get("user_name"));
                context.startActivity(intent);
                break;
        }

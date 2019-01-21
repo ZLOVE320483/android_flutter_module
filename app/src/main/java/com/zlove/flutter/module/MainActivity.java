@@ -28,6 +28,14 @@ public class MainActivity extends AppCompatActivity {
                 FlutterUtils.jumpLoginPage(this)
         );
 
+        findViewById(R.id.jump_to_anim).setOnClickListener(v ->
+                FlutterUtils.jumpAnimPage(this)
+        );
+
+        findViewById(R.id.back).setOnClickListener(v -> {
+            finish();
+        });
+
     }
 
     private void initData() {
@@ -40,5 +48,10 @@ public class MainActivity extends AppCompatActivity {
         }
         String content = "userId:" + userId + ", userName:" + userName;
         textView.setText(content);
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
     }
 }
