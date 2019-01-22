@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'dart:ui';
+import 'dart:math' as math;
 
 class AnimPage extends StatelessWidget {
 
@@ -10,23 +12,11 @@ class AnimPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: _buildAppBar(context),
-      body: Center(
-          child: Column(
-            children: <Widget>[
-              ScaleAnim(key: key1, onTap: () {
-                // ignore: invalid_use_of_protected_member
-                key2.currentState.setState(() {
-
-                });
-              }),
-              ScaleAnim(key: key2, onTap: () {
-                // ignore: invalid_use_of_protected_member
-                key1.currentState.setState(() {
-
-                });
-              }),
-            ],
-          ),
+      body: Container(
+        color: Colors.black12,
+        child: Center(
+          child: RotateAnim(),
+        ),
       ),
     );
   }
@@ -93,5 +83,49 @@ class ScaleAnimState extends State<ScaleAnim> with SingleTickerProviderStateMixi
         widget.onTap();
       },
     );
+  }
+}
+
+class RotateAnim extends StatefulWidget {
+
+  @override
+  State<StatefulWidget> createState() => RotateAnimState();
+}
+
+// assets/icon_home_refresh.png
+class RotateAnimState extends State<RotateAnim>
+    with SingleTickerProviderStateMixin {
+
+  AnimationController animationController;
+  CurvedAnimation curve;
+  Animation<double> animation;
+
+  @override
+  void initState() {
+    super.initState();
+    animationController = new AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 1),
+    );
+    curve = new CurvedAnimation(parent: animationController, curve: Curves.decelerate);
+    animation = Tween(begin: 0.0, end: -1.0).animate(curve);
+    animation.addListener(() {
+      setState(() {
+      });
+    });
+    animationController.repeat();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Transform.rotate(angle: animation.value * 2 * math.pi,
+      child: Image.asset('assets/icon_home_refresh.png'),);
+
+  }
+
+  @override
+  void dispose() {
+    super.dispose();
+    animationController.dispose();
   }
 }
