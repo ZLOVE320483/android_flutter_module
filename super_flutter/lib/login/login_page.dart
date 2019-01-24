@@ -57,6 +57,17 @@ class LoginPage extends StatelessWidget {
               _login(_phoneController.text, _passwordController.text);
             }, color: Colors.blue, child: Text("Login", style: TextStyle(color: Colors.white),),),
           ),
+        ),
+        Container(
+          width: 30,
+          height: 30,
+          child: Material(
+            child: GestureDetector(
+              onTap: () { },
+              child: Icon(Icons.done, color: Colors.red,),
+            ),
+            borderRadius: BorderRadius.circular(90.0),
+            color: Colors.blue,),
         )
       ],
     );
@@ -67,3 +78,4 @@ class LoginPage extends StatelessWidget {
     Router.jumpToNativeActivity("com.zlove.flutter.module.MainActivity");
   }
 }
+
