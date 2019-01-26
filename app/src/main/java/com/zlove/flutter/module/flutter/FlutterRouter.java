@@ -14,4 +14,6 @@ public interface FlutterRouter {
     String PAGE_ANIM = "/anim";
 
     String BOTTOM_SHEET = "/bottom_sheet";
+
+    String PAGE_LIST = "/list";
 }

@@ -21,6 +21,10 @@ public class FlutterUtils {
         openFlutterPage(context, FlutterRouter.BOTTOM_SHEET);
     }
 
+    public static void jumpListPage(Context context) {
+        openFlutterPage(context, FlutterRouter.PAGE_LIST);
+    }
+
     private static void openFlutterPage(Context context, String router) {
         Intent intent = new Intent(context, SuperFlutterActivity.class);
         intent.putExtra(FlutterRouter.ROUTER_KEY, router);

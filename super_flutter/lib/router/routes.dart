@@ -6,6 +6,7 @@ import 'package:super_flutter/setting/settings.dart';
 import 'package:super_flutter/login/login_page.dart';
 import 'package:router/router.dart';
 import 'package:super_flutter/anim/scale_anim.dart';
+import 'package:super_flutter/widget/list.dart';
 
 class Routes {
 
@@ -14,7 +15,8 @@ class Routes {
     '/setting': (context, _) => Settings(),
     '/login': (context, _) => LoginPage(),
     '/anim': (context, _) => AnimPage(),
-    '/bottom_sheet': (context, _) => MyBottomSheet()
+    '/bottom_sheet': (context, _) => MyBottomSheet(),
+    '/list': (context, _) => ListViewDemo()
   };
 
   Routes() {
