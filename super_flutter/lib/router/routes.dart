@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
+import 'package:super_flutter/anim/bottom_sheet.dart';
 import 'package:super_flutter/setting/settings.dart';
 import 'package:super_flutter/login/login_page.dart';
 import 'package:router/router.dart';
@@ -12,7 +13,8 @@ class Routes {
     '/': (context, _) => Material(),
     '/setting': (context, _) => Settings(),
     '/login': (context, _) => LoginPage(),
-    '/anim': (context, _) => AnimPage()
+    '/anim': (context, _) => AnimPage(),
+    '/bottom_sheet': (context, _) => MyBottomSheet()
   };
 
   Routes() {

@@ -17,6 +17,10 @@ public class FlutterUtils {
         openFlutterPage(context, FlutterRouter.PAGE_ANIM);
     }
 
+    public static void jumpBottomSheetPage(Context context) {
+        openFlutterPage(context, FlutterRouter.BOTTOM_SHEET);
+    }
+
     private static void openFlutterPage(Context context, String router) {
         Intent intent = new Intent(context, SuperFlutterActivity.class);
         intent.putExtra(FlutterRouter.ROUTER_KEY, router);

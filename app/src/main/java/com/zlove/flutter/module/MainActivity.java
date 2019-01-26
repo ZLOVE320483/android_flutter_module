@@ -32,6 +32,10 @@ public class MainActivity extends AppCompatActivity {
                 FlutterUtils.jumpAnimPage(this)
         );
 
+        findViewById(R.id.jump_to_bottom).setOnClickListener(v ->
+                FlutterUtils.jumpBottomSheetPage(this)
+        );
+
         findViewById(R.id.back).setOnClickListener(v -> {
             finish();
         });

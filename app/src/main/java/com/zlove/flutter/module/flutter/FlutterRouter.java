@@ -12,4 +12,6 @@ public interface FlutterRouter {
     String PAGE_LOGIN = "/login";
 
     String PAGE_ANIM = "/anim";
+
+    String BOTTOM_SHEET = "/bottom_sheet";
 }
