@@ -40,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
                 FlutterUtils.jumpListPage(this)
         );
 
+        findViewById(R.id.jump_to_text_field).setOnClickListener(v ->
+                FlutterUtils.jumpTextFieldPage(this)
+        );
+
         findViewById(R.id.back).setOnClickListener(v -> {
             finish();
         });

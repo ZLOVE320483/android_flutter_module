@@ -56,12 +56,21 @@ class MyBottomSheet extends StatelessWidget {
                         controller.close();
                       }
                     },
-                    child: ListView.builder(
-                        controller: scrollController,
-                        itemCount: 20,
-                        itemBuilder: (ctx, index) {
-                          return TextListTile(index: index);
-                        }),
+                    child: Stack(
+                      children: <Widget>[
+                        ListView.builder(
+                            controller: scrollController,
+                            itemCount: 20,
+                            itemBuilder: (ctx, index) {
+                              return TextListTile(index: index);
+                            }),
+                        Container(
+                          margin: EdgeInsets.only(top: 410),
+                          height: 50,
+                          child: TextField(decoration: InputDecoration(hintText: "111"),),
+                        )
+                      ],
+                    ),
                   ),
                 );
               });

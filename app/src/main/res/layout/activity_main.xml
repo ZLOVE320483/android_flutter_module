@@ -7,52 +7,71 @@
     android:padding="10dp"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/jump"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jump To Flutter"
-        android:layout_margin="10dp" />
-
-    <TextView
-        android:id="@+id/text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:textSize="18sp"/>
-
-    <Button
-        android:id="@+id/jump_to_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jump To Login"
-        android:layout_margin="10dp" />
-
-    <Button
-        android:id="@+id/jump_to_anim"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jump To Anim"
-        android:layout_margin="10dp" />
-
-    <Button
-        android:id="@+id/jump_to_bottom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jump To Bottom Sheet"
-        android:layout_margin="10dp" />
-
-    <Button
-        android:id="@+id/jump_to_list"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Jump To Bottom List"
-        android:layout_margin="10dp" />
-
-    <Button
-        android:id="@+id/back"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:text="Back"/>
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/jump"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jump To Flutter"
+                android:layout_margin="10dp" />
+
+            <TextView
+                android:id="@+id/text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textSize="18sp"/>
+
+            <Button
+                android:id="@+id/jump_to_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jump To Login"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:id="@+id/jump_to_anim"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jump To Anim"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:id="@+id/jump_to_bottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jump To Bottom Sheet"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:id="@+id/jump_to_list"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jump To Bottom List"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:id="@+id/jump_to_text_field"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Jump To Text Field"
+                android:layout_margin="10dp" />
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="Back"/>
+        </LinearLayout>
+    </ScrollView>
+
 
 </LinearLayout>

@@ -32,14 +32,21 @@ class ListViewDemo extends StatelessWidget {
   }
 
   Widget _buildHorizontalList() {
-    return Container(
-      height: 100,
-      child: ListView.builder(
-          scrollDirection: Axis.horizontal,
-          itemCount: 20,
-          itemBuilder: (ctx, index) {
-            return TextListTile(index: index);
-          }),
+    return Stack(
+      children: <Widget>[
+        ListView.builder(
+            scrollDirection: Axis.vertical,
+            itemCount: 20,
+            itemBuilder: (ctx, index) {
+              return TextListTile(index: index);
+            }),
+        Positioned(child: Container(
+          width: 200,
+            height: 60,
+            child: Center(child: Text("22222"),),
+          ),
+          bottom: 0,)
+      ],
     );
   }
 }
@@ -53,8 +60,7 @@ class TextListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 50,
-      height: 50,
+      height: 70,
       child: Center(
         child: Text(index.toString()),
       ),

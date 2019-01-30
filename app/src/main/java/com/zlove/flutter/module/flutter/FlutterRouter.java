@@ -16,4 +16,6 @@ public interface FlutterRouter {
     String BOTTOM_SHEET = "/bottom_sheet";
 
     String PAGE_LIST = "/list";
+
+    String TEXT_FIELD = "/text_field";
 }
