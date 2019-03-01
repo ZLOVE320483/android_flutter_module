@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/comment_container"
+    android:layout_width="match_parent"
+    android:layout_height="49dp"
+    android:background="@android:color/transparent"
+    android:elevation="1dp"
+    android:orientation="horizontal"
+    android:paddingBottom="7dp"
+    android:paddingTop="7dp">
+
+    <FrameLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <EditText
+            android:id="@+id/comment_edit"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/transparent"
+            android:gravity="start|center_vertical"
+            android:hint="@string/comment_hint"
+            android:paddingEnd="35dp"
+            android:paddingLeft="0dp"
+            android:paddingRight="35dp"
+            android:paddingStart="0dp"
+            android:textAlignment="viewStart"
+            android:textDirection="ltr"
+            android:textColor="@color/color_e5161823"
+            android:textColorHint="@color/color_4c000000"
+            android:textSize="15sp" />
+
+        <ImageView
+            android:id="@+id/tv_at"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="end|center_vertical"
+            android:paddingEnd="14dp"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp"
+            android:paddingStart="14dp"
+            android:scaleType="center"
+            android:src="@drawable/selector_ic_text_markperson" />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/comment_publish"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@null"
+        android:paddingEnd="9dp"
+        android:paddingLeft="9dp"
+        android:paddingRight="9dp"
+        android:paddingStart="9dp"
+        android:scaleType="center"
+        android:src="@drawable/selector_ic_blacksend"
+        android:visibility="gone" />
+
+</LinearLayout>

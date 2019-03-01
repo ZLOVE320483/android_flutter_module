@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:super_flutter/utils/common_method_channel.dart';
-import 'package:router/router.dart';
+import 'package:super_flutter/widget/custom_image.dart';
+import 'package:super_flutter/widget/marquee_continuous.dart';
 
 class LoginPage extends StatelessWidget {
 
@@ -9,7 +10,7 @@ class LoginPage extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.white,
         appBar: _buildAppBar(context),
-        body: _buildBodyWidget(),
+        body: _buildBodyWidget(context),
     );
   }
 
@@ -28,7 +29,7 @@ class LoginPage extends StatelessWidget {
     );
   }
 
-  Widget _buildBodyWidget() {
+  Widget _buildBodyWidget(BuildContext context) {
     final TextEditingController _phoneController = TextEditingController();
     final TextEditingController _passwordController = TextEditingController();
 
@@ -54,7 +55,7 @@ class LoginPage extends StatelessWidget {
           padding: EdgeInsets.all(10.0),
           child: Center(
             child: RaisedButton(onPressed: () {
-              _login(_phoneController.text, _passwordController.text);
+              _login(_phoneController.text, _passwordController.text, context);
             }, color: Colors.blue, child: Text("Login", style: TextStyle(color: Colors.white),),),
           ),
         ),
@@ -68,14 +69,25 @@ class LoginPage extends StatelessWidget {
             ),
             borderRadius: BorderRadius.circular(90.0),
             color: Colors.blue,),
-        )
-      ],
+        ),
+
+        Container(
+          height: 40.0,
+          child: MarqueeContinuous(
+            child: Container(
+              padding: EdgeInsets.all(8.0),
+              // add padding to separate
+              child: Text('this is a short but continous shown text.'),),),),
+    ],
     );
   }
 
-  void _login(String phone, String password) {
-    print("$phone, $password");
-    Router.jumpToNativeActivity("com.zlove.flutter.module.MainActivity");
+  void _login(String phone, String password, BuildContext context) {
+
+
+    Navigator.push(context, MaterialPageRoute(builder: (ctx) {
+      return CustomImage();
+    }));
   }
 }
 

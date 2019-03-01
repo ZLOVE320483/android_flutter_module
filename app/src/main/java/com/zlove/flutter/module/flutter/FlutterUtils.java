@@ -29,6 +29,10 @@ public class FlutterUtils {
         openFlutterPage(context, FlutterRouter.TEXT_FIELD);
     }
 
+    public static void jumpToEntrance(Context context) {
+        openFlutterPage(context, FlutterRouter.ENTRANCE);
+    }
+
     private static void openFlutterPage(Context context, String router) {
         Intent intent = new Intent(context, SuperFlutterActivity.class);
         intent.putExtra(FlutterRouter.ROUTER_KEY, router);

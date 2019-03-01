@@ -33,6 +33,10 @@
             android:windowSoftInputMode="adjustResize" />
 
         <activity
+            android:name=".GestureActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
             android:name=".LoginActivity"
             android:screenOrientation="portrait" />
     </application>

@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">android-flutter-module</string>
+    <string name="comment_hint">Say something nice...</string>
 </resources>

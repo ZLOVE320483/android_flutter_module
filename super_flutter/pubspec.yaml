@@ -27,6 +27,8 @@ dependencies:
   # redux
   flutter_redux: ^0.5.2
 
+  image_loader: ^0.0.3
+
   router:
     git:
       url: https://github.com/ZLOVE320483/flutter_plugin_router.git

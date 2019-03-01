@@ -1,6 +1,18 @@
 import 'package:flutter/material.dart';
 
-class MyTextFieldWidget extends StatelessWidget {
+class MyTextFieldWidget extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() => MyTextFieldWidgetState();
+}
+
+class MyTextFieldWidgetState extends State<MyTextFieldWidget> {
+
+  @override
+  void initState() {
+    super.initState();
+    print("---initState---");
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(

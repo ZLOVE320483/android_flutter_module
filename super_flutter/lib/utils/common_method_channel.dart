@@ -20,4 +20,12 @@ class CommonMethodChannel {
       print("showToast: " + e.toString());
     }
   }
+
+  static showKeyboardDialog() async {
+    try {
+      methodChannel.invokeMethod("showKeyboardDialog");
+    } on PlatformException catch (e) {
+      print("showKeyboardDialog:" + e.toString());
+    }
+  }
 }

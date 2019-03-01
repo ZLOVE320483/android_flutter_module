@@ -47,12 +47,19 @@ packages:
       name: flutter_redux
       url: "http://dart-pub.byted.org"
     source: hosted
-    version: "0.5.2"
+    version: "0.5.3"
   flutter_test:
     dependency: "direct dev"
     description: flutter
     source: sdk
     version: "0.0.0"
+  image_loader:
+    dependency: "direct main"
+    description:
+      name: image_loader
+      url: "http://dart-pub.byted.org"
+    source: hosted
+    version: "0.0.3"
   matcher:
     dependency: transitive
     description:
@@ -93,10 +100,10 @@ packages:
     description:
       path: "router/"
       ref: HEAD
-      resolved-ref: afb30f41a3226b2cb16719255bc4c5d80386297b
+      resolved-ref: "92f3c6746d8f07fc603f2adc9ba021b15da87f5b"
       url: "https://github.com/ZLOVE320483/flutter_plugin_router.git"
     source: git
-    version: "0.0.3"
+    version: "0.0.4"
   sky_engine:
     dependency: transitive
     description: flutter

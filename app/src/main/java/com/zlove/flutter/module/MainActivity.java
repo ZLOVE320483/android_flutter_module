@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
+import com.facebook.drawee.view.SimpleDraweeView;
 import com.zlove.flutter.module.flutter.FlutterUtils;
 
 public class MainActivity extends AppCompatActivity {
@@ -13,6 +14,7 @@ public class MainActivity extends AppCompatActivity {
     int userId;
     String userName;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,8 +22,12 @@ public class MainActivity extends AppCompatActivity {
         textView = findViewById(R.id.text);
         initData();
 
+        findViewById(R.id.jump_to_native).setOnClickListener(v ->
+            startActivity(new Intent(this, GestureActivity.class))
+        );
+
         findViewById(R.id.jump).setOnClickListener(v ->
-             FlutterUtils.jumpSettingPage(this)
+             FlutterUtils.jumpToEntrance(this)
         );
 
         findViewById(R.id.jump_to_login).setOnClickListener(v ->
@@ -48,6 +54,8 @@ public class MainActivity extends AppCompatActivity {
             finish();
         });
 
+        SimpleDraweeView image1 = findViewById(R.id.simple_view);
+        image1.setImageURI("http://03.imgmini.eastday.com/mobile/20170826/20170826184926_37bae545acadfeede2fdd1ba914743cb_2.jpeg");
     }
 
     private void initData() {

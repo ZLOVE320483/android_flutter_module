@@ -7,7 +7,8 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="$USER_HOME$/.pub-cache/git/flutter_plugin_router-afb30f41a3226b2cb16719255bc4c5d80386297b/router/android" />
+            <option value="$USER_HOME$/.pub-cache/git/flutter_plugin_router-92f3c6746d8f07fc603f2adc9ba021b15da87f5b/router/android" />
+            <option value="$USER_HOME$/.pub-cache/hosted/http%58%47%47dart-pub.byted.org/image_loader-0.0.3/android" />
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
             <option value="$PROJECT_DIR$/super_flutter/.android/Flutter" />

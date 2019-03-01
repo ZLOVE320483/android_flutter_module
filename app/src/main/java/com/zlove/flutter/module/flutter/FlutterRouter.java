@@ -18,4 +18,6 @@ public interface FlutterRouter {
     String PAGE_LIST = "/list";
 
     String TEXT_FIELD = "/text_field";
+
+    String ENTRANCE = "/entrance";
 }

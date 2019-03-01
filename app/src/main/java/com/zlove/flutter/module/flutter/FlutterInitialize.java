@@ -12,6 +12,7 @@ public class FlutterInitialize {
 
     public static void initialize() {
         initRouter();
+        new ImageLoaderHelper().initImageLoader();
     }
 
     private static void initRouter() {
@@ -40,4 +41,5 @@ public class FlutterInitialize {
                break;
        }
     }
+
 }

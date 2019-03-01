@@ -2,11 +2,11 @@ package com.zlove.flutter.module.flutter;
 
 import android.os.Bundle;
 
-import com.zlove.router.FlutterRouteActivity;
+import com.zlove.router.FlutterRouteFragmentActivity;
 
 import io.flutter.plugins.GeneratedPluginRegistrant;
 
-public class SuperFlutterActivity extends FlutterRouteActivity {
+public class SuperFlutterActivity extends FlutterRouteFragmentActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
