@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:super_flutter/gesture/gesture_move_widget.dart';
 import 'package:super_flutter/gesture/gesture_tap_widget.dart';
+import 'package:super_flutter/utils/anim_utils.dart';
 
 class FlutterEntrance extends StatelessWidget {
 
@@ -45,8 +47,16 @@ class FlutterEntrance extends StatelessWidget {
 
   void _jump(BuildContext context, int index) {
     if (index == 0) {
-      Navigator.push(context, MaterialPageRoute(builder: (context) {
+      Navigator.push(context, PageRouteBuilder(pageBuilder: (context, animation, secondaryAnimation) {
         return GestureTapWidget();
+      }, transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        return AnimUtils.createRightToLeftTransition(animation, child);
+      }));
+    } else if (index == 1) {
+      Navigator.push(context, PageRouteBuilder(pageBuilder: (context, animation, secondaryAnimation) {
+        return GestureMoveWidget();
+      }, transitionsBuilder: (context, animation, secondaryAnimation, child) {
+        return AnimUtils.createRightToLeftTransition(animation, child);
       }));
     }
   }
